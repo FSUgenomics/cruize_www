@@ -1,12 +1,12 @@
 
-FROM cruize_base
-#FROM vera/cruise_base:latest
+#FROM cruize_base
+FROM vera/cruize_base:latest
 
 MAINTAINER "Daniel Vera" vera@genomics.fsu.edu
 VOLUME /gbdb
+VOLUME /usr/local/bin
 EXPOSE 80
 EXPOSE 443
-
 
 ENV CGI_BIN=/var/www/cgi-bin
 ENV SAMTABIXDIR=/opt/samtabix/
