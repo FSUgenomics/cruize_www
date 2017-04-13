@@ -8,6 +8,8 @@ VOLUME /usr/local/bin
 EXPOSE 80
 EXPOSE 443
 
+ENV APACHE_UID=48
+
 ENV CGI_BIN=/var/www/cgi-bin
 ENV SAMTABIXDIR=/opt/samtabix/
 ENV USE_SSL=1
