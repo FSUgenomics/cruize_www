@@ -20,7 +20,10 @@ ENV PATH=/root/bin/x86_64:/opt/samtabix/:/usr/local/sbin:/usr/local/bin:/usr/sbi
 RUN yum update -y && yum install -y \
  httpd \
  mariadb.x86_64 \
- mod_ssl
+ mod_ssl \
+ epel-release
+ 
+RUN yum update -y && yum install -y certbot
 
 RUN rsync -avz \
 --exclude 'hgCgiData' \
